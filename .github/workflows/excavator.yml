@@ -5,6 +5,17 @@ on:
   schedule:
     # run every 4 hours
     - cron: '20 */4 * * *'
+  # Primary path: a release workflow in an app repo (twentymate / vantage-box)
+  # sends this dispatch right after publishing a release. The schedule above is
+  # only a fallback in case a dispatch doesn't arrive.
+  repository_dispatch:
+    types: [new-release]
+
+# Don't let a scheduled run and a dispatch run (or two dispatches) race each
+# other and double-commit; let the in-flight one finish.
+concurrency:
+  group: excavator
+  cancel-in-progress: false
 
 permissions:
   contents: write
