@@ -16,6 +16,20 @@
             "Vantage Box"
         ]
     ],
+    "post_install": [
+        "$q = [char]34",
+        "$classes = [Microsoft.Win32.Registry]::CurrentUser.OpenSubKey('Software\\Classes', $true)",
+        "$v = $classes.CreateSubKey('vantage')",
+        "$v.SetValue('', 'URL:Vantage Box', 'String')",
+        "$v.SetValue('URL Protocol', '', 'String')",
+        "$c = $v.CreateSubKey('shell\\open\\command')",
+        "$c.SetValue('', ($q + \"$dir\\vantage-box.exe\" + $q + ' ' + $q + 'uri' + $q + ' ' + $q + '%1' + $q), 'String')",
+        "$c.Close(); $v.Close(); $classes.Close()"
+    ],
+    "pre_uninstall": [
+        "try { [Microsoft.Win32.Registry]::CurrentUser.DeleteSubKeyTree('Software\\Classes\\vantage', $false) } catch {}"
+    ],
+    "notes": "The vantage:// URI scheme is registered for the current user on install (the portable build does not self-register it, unlike the NSIS installer) and removed on uninstall. See: https://github.com/noartem/vantage-box/blob/main/API.md",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
