@@ -6,4 +6,5 @@
 scoop bucket add bucket https://github.com/noartem/bucket
 scoop install bucket/twentymate
 scoop install bucket/vantage-box
+scoop install bucket/fastpotify
 scoop install bucket/t3code
