@@ -1,10 +1,10 @@
 {
-    "version": "0.0.38",
+    "version": "0.0.39",
     "description": "",
     "homepage": "https://t3.codes",
     "license": "MIT",
-    "url": "https://github.com/pingdotgg/t3code/releases/download/v0.0.38/T3-Code-0.0.38-x64.exe#/dl.7z",
-    "hash": "sha512:31867a6b1c220069b8daef394e65252c901d7439abe33e88a9f43dde3b60f5e1744a92adce170bdfad5f5c135d074cc6490cdb46bdc40a1cccc4b0eeac4796ed",
+    "url": "https://github.com/pingdotgg/t3code/releases/download/v0.0.39/T3-Code-0.0.39-x64.exe#/dl.7z",
+    "hash": "81c613451f63244565f0d2815a435037091af07237979e158b38a6647ef788b5",
     "architecture": {
         "64bit": {
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
