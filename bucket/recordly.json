@@ -1,12 +1,12 @@
 {
-    "version": "1.3.3",
+    "version": "1.4.0",
     "description": "Open-source screen recorder with auto-zoom, animated cursors, and a timeline editor for polished demo videos.",
     "homepage": "https://recordly.dev/",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/webadderallorg/Recordly/releases/download/v1.3.3/Recordly-windows-x64.exe#/dl.7z",
-            "hash": "sha512:b0ecc40fc2656386425e39843bbf27c096fc9f5d48a5de569167403c70fae9984289540ed1dc3f6cfca9fb661d676ae0ef3713d38ba1e1f5762e18006c181317"
+            "url": "https://github.com/webadderallorg/Recordly/releases/download/v1.4.0/Recordly-windows-x64.exe#/dl.7z",
+            "hash": "sha512:5db9eece1ad1e396457021155766f731d0c504df6205c4856df006c2f84df57beea6b421e41fc4450266ec82ad539fefe5d30b88482f9178b218c433d01896de"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
