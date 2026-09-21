@@ -1,0 +1,23 @@
+name: Notify site
+
+# Sends repository_dispatch to noartem.github.io so the site refreshes
+# immediately when the bucket changes. Requires secret SITE_REPO_TOKEN:
+# a PAT of this user with "repo" scope (or fine-grained Contents read+write
+# on noartem.github.io).
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch site refresh
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.SITE_REPO_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/noartem/noartem.github.io/dispatches \
+            -d '{"event_type":"bucket-updated"}'
