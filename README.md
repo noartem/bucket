@@ -17,3 +17,6 @@ scoop install noartem/twentymate
 | [Recordly](https://recordly.dev/) | Open-source screen recorder with auto-zoom, animated cursors, and a timeline editor for polished demo videos. | [recordly.dev](https://recordly.dev/) | [webadderallorg/Recordly](https://github.com/webadderallorg/Recordly) |
 | [TaskSlinger](https://taskslinger.net/) | Native Windows task manager replacement built in C/Win32 with a custom Direct3D UI. | [taskslinger.net](https://taskslinger.net/) | — |
 | [Blick](https://blickeditor.com/) | Fully native non-linear video editor built from scratch. | [blickeditor.com](https://blickeditor.com/) | — |
+| [CloakUI](https://github.com/noartem/cloakui) | Windows GUI for Cloak CLI. Tray OTP popup for the cloak CLI. | [CloakUI GitHub](https://github.com/noartem/cloakui) | [noartem/cloakui](https://github.com/noartem/cloakui) |
+| [Vantage Box](https://github.com/noartem/vantage-box) | Minimalistic desktop GUI for sing-box | [Vantage Box GitHub](https://github.com/noartem/vantage-box) | [noartem/vantage-box](https://github.com/noartem/vantage-box) |
+| [Neru](https://github.com/y3owk1n/neru) | Hints, grids and vim keys for your whole desktop. One binary, one TOML file; a keyboard-driven mouse replacement. | [Neru GitHub](https://github.com/y3owk1n/neru) | [y3owk1n/neru](https://github.com/y3owk1n/neru) |
