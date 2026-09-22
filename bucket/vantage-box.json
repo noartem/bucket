@@ -1,12 +1,12 @@
 {
-    "version": "1.5.1",
+    "version": "1.5.2",
     "description": "Minimalistic desktop GUI for sing-box",
     "homepage": "https://github.com/noartem/vantage-box",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/noartem/vantage-box/releases/download/v1.5.1/vantage-box-portable-1.5.1.zip",
-            "hash": "6dec415f8c284ab3eed722854971ff6c3b4687c05b3ccceef491fba708439a00"
+            "url": "https://github.com/noartem/vantage-box/releases/download/v1.5.2/vantage-box-portable-1.5.2.zip",
+            "hash": "4bfd46ed786f081c07e5d7762fbf515deabc89058795299fc16192a83e4ec105"
         }
     },
     "bin": [
