@@ -1,0 +1,47 @@
+{
+    "version": "0.6.7-dev.20250831.0017+afe2de7",
+    "description": "GameStream client for NVIDIA GameStream, Apollo and Sunshine servers — an enhanced fork of Moonlight Qt with clipboard sync, server commands, OTP pairing and an in-stream quick menu",
+    "homepage": "https://github.com/wjbeckett/artemis",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wjbeckett/artemis/releases/download/0.6.7-dev.20250831.0017+afe2de7/artemis-windows-x64-portable-0.6.7-dev.20250831.0017+afe2de7.zip",
+            "hash": "ee931bebb6b9f073448e1777ec7ab465879b45d72c8069f91aeb2ac24feaab70"
+        },
+        "arm64": {
+            "url": "https://github.com/wjbeckett/artemis/releases/download/0.6.7-dev.20250831.0017+afe2de7/artemis-windows-arm64-portable-0.6.7-dev.20250831.0017+afe2de7.zip",
+            "hash": "dffc60066072421d91378e9e3920ce41f36b41453c407c2a8351ae1b2aca6f98"
+        }
+    },
+    "bin": "Artemis.exe",
+    "shortcuts": [
+        [
+            "Artemis.exe",
+            "Artemis"
+        ]
+    ],
+    "persist": "Artemis Desktop Project",
+    "notes": "Upstream only publishes development builds, so this manifest tracks the newest -dev release. The portable build enables portable mode through the portable.dat file in its working directory, which is why the streaming settings Qt writes to the 'Artemis Desktop Project' folder are persisted across updates; the Start Menu shortcut runs the app from that directory.",
+    "checkver": {
+        "url": "https://api.github.com/repos/wjbeckett/artemis/releases",
+        "jsonpath": "$[0].tag_name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wjbeckett/artemis/releases/download/$version/artemis-windows-x64-portable-$version.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/wjbeckett/artemis/releases/tags/$version",
+                    "jsonpath": "$.assets[?(@.name == 'artemis-windows-x64-portable-$version.zip')].digest"
+                }
+            },
+            "arm64": {
+                "url": "https://github.com/wjbeckett/artemis/releases/download/$version/artemis-windows-arm64-portable-$version.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/wjbeckett/artemis/releases/tags/$version",
+                    "jsonpath": "$.assets[?(@.name == 'artemis-windows-arm64-portable-$version.zip')].digest"
+                }
+            }
+        }
+    }
+}
